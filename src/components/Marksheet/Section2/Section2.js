@@ -1,7 +1,7 @@
 import React from "react";
 import "./Section2.css";
 
-function Section2() {
+function Section2({data}) {
   return (
     <div>
       <p>Serial No: 0527</p>
@@ -31,7 +31,7 @@ function Section2() {
             fontWeight: "600",
           }}
         >
-          B.Tech V Semester (CSE)
+          {`${data.course} ${data.semester} (${data.branch})`}
         </p>
       </div>
       <div>
@@ -48,7 +48,7 @@ function Section2() {
           <p
             style={{ fontFamily: "Playfair Display, serif", fontSize: "17px" }}
           >
-            <b>Student Name: MUSKAN GOEL</b>
+            <b>Student Name: {data.name}</b>
           </p>
           <p style={{ fontSize: "17px" }}>
             <b
@@ -59,11 +59,11 @@ function Section2() {
             >
               Roll No.
             </b>
-            <b>: 190050101038</b>
+            <b>: {data.rollNo}</b>
           </p>
         </div>
         <p style={{ fontFamily: "Playfair Display, serif", fontSize: "17px" }}>
-          <b>Father's Name: ISHWARI DUTT GOEL</b>
+          <b>Father's Name: {data.fatherName}</b>
         </p>
       </div>
     </div>
